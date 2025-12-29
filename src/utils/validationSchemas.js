@@ -41,4 +41,8 @@ export const SIGNUP_VALIDATION_SCHEMA = yup.object({
     .string()
     .oneOf([yup.ref("password")], "Passwords must match")
     .required("Please confirm your password"),
+  isAgree: yup
+    .boolean()
+    .oneOf([true], "Must accept terms and conditions")
+    .required("Must accept terms and conditions"),
 });
